@@ -1,6 +1,6 @@
 # 🚀 Smart Exam Analyzer
 
-👉 **Live Demo:** https://your-streamlit-app-link.streamlit.app
+👉 **Live Demo:** smart-exam-analyzer.vercel.app
 👉 **Demo Video:** https://your-video-link.com
 
 An AI-powered web app that helps students **analyze past exam papers**, identify **high-yield topics**, and generate a **smart study plan**.
