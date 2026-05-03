@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ExamPaper {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  fileName       String?
+  mimeType       String?
+  /// JSON: [{ name, mimeType, size, kind }]
+  sourceFiles    Json?
+  extractedText  String   @db.Text
+  /// Merged structured analysis (all sections; plan/questions may be filled later)
+  analysis       Json?
+  syllabusText   String?  @db.Text
+  syllabusReport Json?
+  studyPlan      Json?
+  practiceBank   Json?
+}
